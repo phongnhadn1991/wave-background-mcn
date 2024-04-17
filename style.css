@@ -23,6 +23,16 @@
     right: 0;
     top: 20%;
   }
+  .box::before {
+    content: '';
+    width: 609px;
+    height: 283px;
+    background: url('./images/left_wave.png') no-repeat center;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: 9;
+  }
   .background{
     width:100vw;
     height: 100vh;
@@ -35,16 +45,20 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    z-index: 9;
+    z-index: 4;
   }
 
   @media screen and (max-width: 600px) {
     .box {
       background-size: 180%;
     }
-    .box::after {
+    .box::before, .box::after {
       top: 20vh;
       background-size: contain;
       max-width: 80vw;
+    }
+    .box::before {
+      top: 29vh;
+      left: -40vw;
     }
   }
