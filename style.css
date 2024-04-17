@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    height:100%;
+    width:100vw;
+    background: url('./images/city.jpg') no-repeat bottom;
+    background-position-y: -42vw;
+    background-size: cover;
+    border-radius:0;
+    overflow:hidden;
+    position: relative;
+  }
+  .box::after {
+    content: '';
+    width: 609px;
+    height: 283px;
+    background: url('./images/right_wave.png') no-repeat center;
+    position: absolute;
+    right: 0;
+    top: 20%;
+  }
+  .background{
+    width:100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    overflow: hidden;
+  }
+  #canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+  }
